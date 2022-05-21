@@ -16,6 +16,7 @@ tags: [IDEA,JAR]
 选择本地jar包所在目录并确认应用，这里我在当前项目下新建了名为lib的Directory，本地jar包都移到这里面
 
 ![select lib](https://wx2.sinaimg.cn/large/005Ii7rngy1gocuhg184bj30sw0noaaz.jpg)
+![select lib](http://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Unix_timeline.en.svg/800px-Unix_timeline.en.svg.png)
 
 完成后就可以看见已经成功引入本地jar包
 
