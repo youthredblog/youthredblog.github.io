@@ -1,10 +1,13 @@
 ---
-datetime: 2021-04-15 00:00:00
+layout: post
+title: "Centos7卸载OpenJdk,安装OracleJdk"
+#subtitle: ""
+date: 2021-04-15 13:23:00
+author: youthred
+header-style: text
+catalog: true
+tags: [CentOS,JDK]
 ---
-
-
-
-# Centos7卸载openjdk，安装oraclejdk
 
 ### 查看JDK版本
 

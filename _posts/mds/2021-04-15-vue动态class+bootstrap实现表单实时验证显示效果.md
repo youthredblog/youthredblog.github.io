@@ -1,12 +1,15 @@
 ---
-datetime: 2021-04-15 11:04:28
+layout: post
+title: "利用vue的监听和动态class绑定"
+# subtitle: ""
+date: 2021-04-15 15:22:28
+author: youthred
+header-style: text
+catalog: true
+tags: [VUE]
 ---
 
-
-
 ![GIF](https://wx1.sinaimg.cn/large/005Ii7rngy1gcmkqqcebyg30c302umy9.gif)
-
-## 利用vue的监听和动态class绑定
 
 这里模拟检测输入的字符串是否为“admin”
 

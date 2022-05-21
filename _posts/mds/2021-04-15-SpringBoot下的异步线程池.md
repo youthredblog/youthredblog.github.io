@@ -1,8 +1,13 @@
 ---
-datetime: 2021-04-15 11:04:28
+layout: post
+title: "SpringBoot下的异步线程池"
+# subtitle: ""
+date: 2021-04-15 22:32:28
+author: youthred
+header-style: text
+catalog: true
+tags: [SpringBoot]
 ---
-
-
 
 ``` java
 package net.add1s.config.thread;

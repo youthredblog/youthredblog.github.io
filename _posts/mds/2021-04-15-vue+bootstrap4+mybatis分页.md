@@ -1,8 +1,13 @@
 ---
-datetime: 2021-04-15 11:04:28
+layout: post
+title: "vue+bootstrap4+mybatis分页"
+# subtitle: ""
+date: 2021-04-15 22:12:28
+author: youthred
+header-style: text
+catalog: true
+tags: [VUE]
 ---
-
-
 
 ![gif](https://wx4.sinaimg.cn/large/005Ii7rngy1gb0nmqlruag31gy0qpb29.gif)
 

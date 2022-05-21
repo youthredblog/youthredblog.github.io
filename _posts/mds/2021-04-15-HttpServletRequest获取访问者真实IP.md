@@ -1,10 +1,13 @@
 ---
-datetime: 2021-04-15 11:04:28
+layout: post
+title: "HttpServletRequest获取访问者真实IP"
+# subtitle: ""
+date: 2021-04-15 15:22:28
+author: youthred
+header-style: text
+catalog: true
+tags: [Java]
 ---
-
-
-
-# HttpServletRequest获取访问者真实IP
 
 ``` java
 package net.add1s.util;

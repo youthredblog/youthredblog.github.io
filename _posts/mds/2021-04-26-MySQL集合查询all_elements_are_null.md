@@ -1,8 +1,13 @@
 ---
-datetime: 2021-04-26 11:04:28
+layout: post
+title: "MySQL集合查询all_elements_are_null"
+# subtitle: ""
+date: 2021-04-26 11:04:28
+author: youthred
+header-style: text
+catalog: true
+tags: [MySQL]
 ---
-
-
 
 今天用CollectionUtils判断集合是否为空时发现个奇怪的查询数据：集合size=1，展开后提示“all elements are null”，SQL单独查询是空的。
 就很奇怪，为什么SQL查出来一条都没有但代码里size=1还all elements are null。

@@ -1,10 +1,13 @@
 ---
-datetime: 2021-04-15 00:00:00
+layout: post
+title: "Centos7下MySQL8彻底卸载及安装"
+# subtitle: ""
+date: 2021-04-15 00:00:00
+author: youthred
+header-style: text
+catalog: true
+tags: [CentOS,MySQL]
 ---
-
-
-
-# Centos7下MySQL8彻底卸载及安装
 
 ## 首先升级yum `yum update`
 

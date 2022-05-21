@@ -1,9 +1,9 @@
 ---
-layout:     post
-title:      "Springboot统一异常处理"
-# subtitle:   ""
-date:       2021-04-15 12:09:00
-author:     "youthred"
+layout: post
+title: "Springboot统一异常处理"
+# subtitle: ""
+date: 2021-04-15 12:09:00
+author: youthred
 header-style: text
 catalog: true
 tags: [SpringBoot]

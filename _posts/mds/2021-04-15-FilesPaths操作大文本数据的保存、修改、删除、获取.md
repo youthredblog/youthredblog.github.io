@@ -1,10 +1,13 @@
 ---
-datetime: 2021-04-15 00:00:00
+layout: post
+title: "FilesPaths操作大文本数据的保存、修改、删除、获取"
+subtitle: "如何在IDEA引入了本地jar包的情况下使用maven插件打包"
+date: 2021-04-15 13:31:00
+author: youthred
+header-style: text
+catalog: true
+tags: [Java]
 ---
-
-
-
-# FilesPaths操作大文本数据的保存、修改、删除、获取
 
 **`util-articleFile.properties`里的`parent.path`就是存储文本文件的目录的绝对路径**
 
