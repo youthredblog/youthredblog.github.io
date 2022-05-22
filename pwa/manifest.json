@@ -1,0 +1,15 @@
+{
+  "name": "Youthred's Blog",
+  "short_name": "Youthred's Blog",
+  "description": "About an engineer & designer who loves web.",
+  "icons": [{
+    "src": "icons/200.png",
+    "sizes": "200x200",
+    "type": "image/png"
+  }],
+  "background_color": "#fff",
+  "theme_color": "#000",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}
