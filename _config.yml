@@ -102,8 +102,8 @@ page-mathjax: false
 
 # Friends
 friends: [
-    {
-        title: "SnowingFox"
-        href: "https://snowingfox.vercel.app"
-    },
+#    {
+#        title: "SnowingFox"
+#        href: "https://snowingfox.vercel.app"
+#    },
 ]
