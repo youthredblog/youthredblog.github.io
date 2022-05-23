@@ -4,7 +4,7 @@ title: "Logback自定义过滤器实现日志的WebSocket前端输出"
 #subtitle: ""
 date: 2022-05-23 13:36:39
 author: youthred
-header-style: text
+header-img: "img/jk-siwa.png"
 catalog: true
 tags: [SpringBoot,Java,Logback]
 ---

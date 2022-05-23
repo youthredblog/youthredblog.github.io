@@ -4,7 +4,7 @@ title: "利用vue的监听和动态class绑定"
 # subtitle: ""
 date: 2021-04-15 15:22:28
 author: youthred
-header-style: text
+header-img: "img/jk-siwa.png"
 catalog: true
 tags: [VUE]
 ---

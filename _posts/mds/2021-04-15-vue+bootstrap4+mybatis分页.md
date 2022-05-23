@@ -4,7 +4,7 @@ title: "vue+bootstrap4+mybatis分页"
 # subtitle: ""
 date: 2021-04-15 22:12:28
 author: youthred
-header-style: text
+header-img: "img/jk-siwa.png"
 catalog: true
 tags: [VUE]
 ---

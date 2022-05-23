@@ -4,7 +4,7 @@ title: "Elasticsearch7.6.x允许head-master跨域访问"
 # subtitle: ""
 date: 2021-04-15 19:22:00
 author: youthred
-header-style: text
+header-img: "img/jk-siwa.png"
 catalog: true
 tags: [Elasticsearch]
 ---

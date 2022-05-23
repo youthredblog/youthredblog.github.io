@@ -4,7 +4,7 @@ title: "HttpServletRequest获取访问者真实IP"
 # subtitle: ""
 date: 2021-04-15 15:22:28
 author: youthred
-header-style: text
+header-img: "img/jk-siwa.png"
 catalog: true
 tags: [Java]
 ---
