@@ -24,4 +24,4 @@ INSERT INTO `sys_permission` VALUES (5, 'letter:find', '/letter/find/**', '鏌�
 
 用Notepad2打开的.sql文件，依次点击【文件】【编码】【重新编码】，然后选择原数据库的编码格式即可，一般都是UTF-8的吧
 
-![UTF-8](https://wx3.sinaimg.cn/large/005Ii7rngy1gcgyjj9x5oj30ad0ahmxb.jpg)
+![UTF-8](/img/for-post/005Ii7rngy1gcgyjj9x5oj30ad0ahmxb.jpg)

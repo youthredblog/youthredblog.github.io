@@ -59,7 +59,7 @@ tags: [IDEA,JAR]
 
 此时`External Libraries`里也正常引入了
 
-![](https://wx3.sinaimg.cn/large/005Ii7rngy1gocvej3sytj30ea0bkaa8.jpg)
+![](/img/for-post/005Ii7rngy1gocvej3sytj30ea0bkaa8.jpg)
 
 然后是`build`
 
@@ -104,6 +104,6 @@ tags: [IDEA,JAR]
 
 **此时就可以愉快地使用maven插件打包了 :)**
 
-![奇迹再现](https://wx2.sinaimg.cn/large/005Ii7rngy1gocvh43u8ij30fx0a4jrg.jpg)
+![奇迹再现](/img/for-post/005Ii7rngy1gocvh43u8ij30fx0a4jrg.jpg)
 
 顺便一提，如果要使用IDEA Artifacts打包，需要注意的是在选择`MANIFEST.MF`文件保存位置时不要默认选到`xx/src/main/java`，这会导致打出来的包丢失主类信息如`Main-Class: net.add1s.localjardemo.LocalJarDemoApplication`
