@@ -15,15 +15,15 @@ tags: [IDEA,JAR]
 
 选择本地jar包所在目录并确认应用，这里我在当前项目下新建了名为lib的Directory，本地jar包都移到这里面
 
-![select lib](https://wx2.sinaimg.cn/large/005Ii7rngy1gocuhg184bj30sw0noaaz.jpg)
+![select lib](/img/for-post/005Ii7rngy1gocuhg184bj30sw0noaaz.jpg)
 
 完成后就可以看见已经成功引入本地jar包
 
-![](https://wx3.sinaimg.cn/large/005Ii7rngy1gocuhznvibj30sw0nomxl.jpg)
+![](/img/for-post/005Ii7rngy1gocuhznvibj30sw0nomxl.jpg)
 
 然后转到Modules
 
-![modules](https://wx1.sinaimg.cn/large/005Ii7rngy1goculwhb6oj30sw0not9e.jpg)
+![modules](/img/for-post/005Ii7rngy1goculwhb6oj30sw0not9e.jpg)
 
 可以看到当前模块的依赖就有了刚刚添加的本地jar包，作用域为Compile
 
@@ -31,7 +31,7 @@ tags: [IDEA,JAR]
 
 打开侧栏`Project`的`External Libraries`，可以看到现在项目除了JDK以外并无其他依赖包
 
-![`External Libraries`](https://wx1.sinaimg.cn/large/005Ii7rngy1gocurl0fbfj30e9099aa4.jpg)
+![`External Libraries`](/img/for-post/005Ii7rngy1gocurl0fbfj30e9099aa4.jpg)
 
 打开`pom.xml`文件
 
