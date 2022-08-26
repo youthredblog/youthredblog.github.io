@@ -545,7 +545,7 @@ public class FeignInterceptor implements RequestInterceptor {
 
 其实有一个开源项目 [feign-reactive](https://github.com/PlaytikaOSS/feign-reactive) 可以实现，但没有深究如何使用，这里就将就手动使用 `@RequestHeader` 转递，幸好网关的鉴权功能只需要一个接口。
 
-### Feign Timeout
+### 4.2 Feign Timeout
 
 开启熔断降级后，一般得自定义远程服务超时时间，默认1S，建议5S
 
