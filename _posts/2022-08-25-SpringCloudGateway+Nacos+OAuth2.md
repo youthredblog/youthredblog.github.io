@@ -308,7 +308,7 @@ spring:
             refresh: true
     sentinel:
       transport:
-        dashboard: ${SENTINEL_DASHBOARD_HOST:10.1.16.57}:${SENTINEL_DASHBOARD_PORT:8080}
+        dashboard: ${SENTINEL_DASHBOARD_HOST}:${SENTINEL_DASHBOARD_PORT}
 ```
 
 ## 2 authenticator 鉴权服务
