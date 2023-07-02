@@ -57,7 +57,7 @@ public class WsSer implements ApplicationRunner {
 ### SocketChannelInitializer
 
 ``` java
-import com.fritt.es.cleaner.conf.netty.handler.ConnectHandler;
+import io.github.youthred.es.cleaner.conf.netty.handler.ConnectHandler;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.handler.codec.http.HttpObjectAggregator;
@@ -132,7 +132,7 @@ import ch.qos.logback.core.spi.FilterReply;
 import cn.hutool.core.date.DatePattern;
 import cn.hutool.core.date.LocalDateTimeUtil;
 import cn.hutool.core.util.StrUtil;
-import com.fritt.es.cleaner.conf.netty.handler.ConnectHandler;
+import io.github.youthred.es.cleaner.conf.netty.handler.ConnectHandler;
 import lombok.extern.slf4j.Slf4j;
 
 import java.time.format.DateTimeFormatter;
@@ -231,13 +231,13 @@ CronUtil.start();
 
 ```
 Connected to ws://x.x.x.x:3333/ws
-INFO - 2022-05-23 14:17:04 - com.fritt.es.cleaner.conf.Init: 2022-05-23 14:17:04
-INFO - 2022-05-23 14:17:05 - com.fritt.es.cleaner.conf.Init: 2022-05-23 14:17:05
-INFO - 2022-05-23 14:17:06 - com.fritt.es.cleaner.conf.Init: 2022-05-23 14:17:06
-INFO - 2022-05-23 14:17:07 - com.fritt.es.cleaner.conf.Init: 2022-05-23 14:17:07
-INFO - 2022-05-23 14:17:08 - com.fritt.es.cleaner.conf.Init: 2022-05-23 14:17:08
-INFO - 2022-05-23 14:17:09 - com.fritt.es.cleaner.conf.Init: 2022-05-23 14:17:09
-INFO - 2022-05-23 14:17:10 - com.fritt.es.cleaner.conf.Init: 2022-05-23 14:17:10
+INFO - 2022-05-23 14:17:04 - io.github.youthred.es.cleaner.conf.Init: 2022-05-23 14:17:04
+INFO - 2022-05-23 14:17:05 - io.github.youthred.es.cleaner.conf.Init: 2022-05-23 14:17:05
+INFO - 2022-05-23 14:17:06 - io.github.youthred.es.cleaner.conf.Init: 2022-05-23 14:17:06
+INFO - 2022-05-23 14:17:07 - io.github.youthred.es.cleaner.conf.Init: 2022-05-23 14:17:07
+INFO - 2022-05-23 14:17:08 - io.github.youthred.es.cleaner.conf.Init: 2022-05-23 14:17:08
+INFO - 2022-05-23 14:17:09 - io.github.youthred.es.cleaner.conf.Init: 2022-05-23 14:17:09
+INFO - 2022-05-23 14:17:10 - io.github.youthred.es.cleaner.conf.Init: 2022-05-23 14:17:10
 INFO - 2022-05-23 14:17:10 - org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor: Shutting down ExecutorService 'applicationTaskExecutor'
 Connect closed
 ```

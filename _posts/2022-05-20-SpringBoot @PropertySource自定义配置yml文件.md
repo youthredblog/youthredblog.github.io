@@ -18,7 +18,7 @@ tags: [SpringBoot]
 对于`YAML`格式也是可以解析的，但需要实现`PropertySourceFactory`。
 
 ``` java
-package com.fritt.es.cleaner.conf;
+package io.github.youthred.es.cleaner.conf;
 
 import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;
 import org.springframework.core.env.PropertiesPropertySource;
