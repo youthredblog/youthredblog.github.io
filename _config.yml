@@ -107,8 +107,3 @@ friends: [
     href: "https://snowingfox.vercel.app/"
   }
 ]
-
-pages:
-  doc:
-    title: DOC
-    url: /_doc/
