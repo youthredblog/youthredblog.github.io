@@ -1,10 +1,10 @@
 # Site settings
-title: 芳华
+title: 芳華Youthred
 SEOTitle: Youthred's Blog
 header-img: img/header-osawariheaven.png
 email: pj.w@qq.com
 description: "Just writing"
-keyword: "youthred 芳华 博客"
+keyword: "youthred 芳华 博客 芳華"
 url: "https://youthred.github.io/"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -107,3 +107,8 @@ friends: [
     href: "https://snowingfox.vercel.app/"
   }
 ]
+
+pages:
+  doc:
+    title: DOC
+    url: /_doc/
