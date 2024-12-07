@@ -5,7 +5,7 @@ header-img: img/header-osawariheaven.png
 email: pj.w@qq.com
 description: "Just writing"
 keyword: "youthred 芳华 博客 芳華"
-url: "https://youthred.github.io/blog"              # your host, for absolute URL
+url: "https://youthred.github.io/"              # your host, for absolute URL
 baseurl: "/blog"                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -103,7 +103,7 @@ page-mathjax: false
 # Friends
 friends: [
   {
-    title: "SnowingFox",
+    title: "SnowingFox 123",
     href: "https://snowingfox.vercel.app/"
   }
 ]
