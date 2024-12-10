@@ -84,6 +84,9 @@ public class Eml implements Serializable {
     private String datetime;
     private List<Field> headers;
     private String headersStr;
+    /**
+     * L:附件名称 M:字节大小 R:字节数组数据
+     */
     private List<Triple<String, Long, byte[]>> attachments = new ArrayList<>();
 }
 ```
