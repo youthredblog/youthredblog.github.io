@@ -15,7 +15,7 @@ rsync可以被注册为systemctl服务，但本篇不做讨论，代码越简单
 
 直接贴代码
 
-```shell script
+```shell
 # 本地
 find /local_path -type f -print0 | xargs -0 -I% -P5 rsync -avP % /local_path2
 
@@ -35,7 +35,7 @@ find /local_path -type f -print0 | xargs -0 -I% -P5 rsync -avP % remote_user@rem
 
 rsync_push.sh
 
-```shell script
+```shell
 #!/bin/bash
 # author https://github.com/youthred
 
