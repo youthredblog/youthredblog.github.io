@@ -27,7 +27,7 @@ find /local_path -type f -print0 | xargs -0 -I% -P5 rsync -avP % remote_user@rem
 # -print0 标准输出处理文件名称的特殊字符（空格、换行符等）
 # -0 使用NULL作为分隔符，与-print0搭配使用
 # -I% 参数变量名称指定为%
-# -P5 最大并行数
+# -P5 最大并行数5
 # -avP -a归档 -v增加输出信息 -P显示进度并支持断点续传
 ```
 
