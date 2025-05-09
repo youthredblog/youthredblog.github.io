@@ -122,6 +122,6 @@ echo $rsyncexecres
 
 使用
 
-```shell script
+```shell
 find /local_path -type f -print0 | xargs -0 -I% -P5 sh rsync_push.sh -l% -rru@rip:/rp -p'123456' -Lsynclogfile
 ```
