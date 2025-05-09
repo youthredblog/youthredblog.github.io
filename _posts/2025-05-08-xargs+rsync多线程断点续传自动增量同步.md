@@ -20,7 +20,7 @@ rsync可以被注册为systemctl服务，但本篇不做讨论，代码越简单
 find /local_path -type f -print0 | xargs -0 -I% -P5 rsync -avP % /local_path2
 
 # 远程
-find /local_path -type f -print0 | xargs -0 -I% -P5 rsync -avP % remote_user@remote_ip:/remote_path
+find /local_path -type f -print0 | xargs -0 -I% -P5 rsync -avrP % remote_user@remote_ip:/remote_path
 
 # 简单解释
 # -type f 递归找寻/local_path下所有文件
@@ -28,7 +28,7 @@ find /local_path -type f -print0 | xargs -0 -I% -P5 rsync -avP % remote_user@rem
 # -0 使用NULL作为分隔符，与-print0搭配使用
 # -I% 参数变量名称指定为%
 # -P5 最大并行数5
-# -avP -a归档 -v增加输出信息 -P显示进度并支持断点续传
+# -avrP -a归档 -v增加输出信息 -r递归子目录并保持目录结构 -P显示进度并支持断点续传
 ```
 
 执行远程同步后会提示输密码，进一步编写脚本以自动化
@@ -106,7 +106,7 @@ log() {
 # expect默认超时30S，会导致大文件未传输完就G了，设置为-1表示无超时
 rsyncexecres=$(expect -c "
 set timeout -1
-spawn rsync -avP $local $remote
+spawn rsync -avrP $local $remote
 expect {
   \"yes/no\" { send \"yes\r\"; exp_continue }
   \"assword:\" { send \"$pass\r\" }
@@ -123,5 +123,7 @@ echo $rsyncexecres
 使用
 
 ```shell
-find /local_path -type f -print0 | xargs -0 -I% -P5 sh rsync_push.sh -l% -rru@rip:/rp -p'123456' -Lsynclogfile
+ls $(pwd) | xargs -I% -P5 sh rsync_push.sh -l$(pwd)/% -rru@rip:/rp/ -p'123456' -Lsynclogfile
+find /local_path -type f -print0 | xargs -0 -I% -P5 sh rsync_push.sh -l% -rru@rip:/rp/ -p'123456' -Lsynclogfile
+find $(pwd) -maxdepth 1 ! -path "$(pwd)" -print0 | xargs -0 -I% -P5 sh rsync_push.sh -l% -rru@rip:/rp/ -p'123456' -Lsynclogfile
 ```
