@@ -4,7 +4,7 @@ title: "Elasticsearch date类型Java和DSL查询格式问题"
 subtitle: "在es里查询条件`date`类型的字段时，比如`range`查询，若格式化设为`yyyy-MM-dd HH:mm:ss`，则传入的`gte`等参数默认只接受这个格式的字符串。如果传入时间戳的`long`值，则需指定format为`epoch_millis`”，两种参数意义一样，只在形式不同，但其查询结果却不一致。"
 date: 2022-05-19 10:01:00
 author: youthred
-header-img: "img/jk-siwa.png"
+header-img: "img/onepunch.png"
 catalog: true
 tags: [Elasticsearch]
 ---

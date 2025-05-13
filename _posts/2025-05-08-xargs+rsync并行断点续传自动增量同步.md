@@ -4,7 +4,7 @@ title: "xargs+rsync并行断点续传自动增量同步"
 # subtitle: ""
 date: 2025-05-08 18:04:00
 author: youthred
-header-img: "img/jk-siwa.png"
+header-img: "img/onepunch.png"
 catalog: true
 tags: [Shell]
 ---

@@ -4,7 +4,7 @@ title: "IDEA添加本地jar包并使用maven打包"
 subtitle: "如何在IDEA引入了本地jar包的情况下使用maven插件打包"
 date: 2021-09-12 19:51:39
 author: youthred
-header-img: "img/jk-siwa.png"
+header-img: "img/onepunch.png"
 catalog: true
 tags: [IDEA,JAR]
 ---

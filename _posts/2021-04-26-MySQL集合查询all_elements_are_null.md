@@ -4,7 +4,7 @@ title: "MySQL集合查询all_elements_are_null"
 # subtitle: ""
 date: 2021-04-26 11:04:28
 author: youthred
-header-img: "img/jk-siwa.png"
+header-img: "img/onepunch.png"
 catalog: true
 tags: [MySQL]
 ---

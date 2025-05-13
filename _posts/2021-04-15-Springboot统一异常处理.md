@@ -4,7 +4,7 @@ title: "Springboot统一异常处理"
 # subtitle: ""
 date: 2021-04-15 12:09:00
 author: youthred
-header-img: "img/jk-siwa.png"
+header-img: "img/onepunch.png"
 catalog: true
 tags: [SpringBoot]
 ---

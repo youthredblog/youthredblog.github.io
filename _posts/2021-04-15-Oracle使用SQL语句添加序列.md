@@ -4,7 +4,7 @@ title: "Oracle使用SQL语句添加序列"
 # subtitle: ""
 date: 2021-04-15 17:06:28
 author: youthred
-header-img: "img/jk-siwa.png"
+header-img: "img/onepunch.png"
 catalog: true
 tags: [Oracle]
 ---

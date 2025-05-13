@@ -4,7 +4,7 @@ title: "Navicat转储SQL文中文数据乱码"
 # subtitle: ""
 date: 2021-04-15 11:04:28
 author: youthred
-header-img: "img/jk-siwa.png"
+header-img: "img/onepunch.png"
 catalog: true
 tags: [MySQL]
 ---

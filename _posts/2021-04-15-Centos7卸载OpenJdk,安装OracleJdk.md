@@ -4,7 +4,7 @@ title: "Centos7卸载OpenJdk,安装OracleJdk"
 #subtitle: ""
 date: 2021-04-15 13:23:00
 author: youthred
-header-img: "img/jk-siwa.png"
+header-img: "img/onepunch.png"
 catalog: true
 tags: [CentOS,JDK]
 ---

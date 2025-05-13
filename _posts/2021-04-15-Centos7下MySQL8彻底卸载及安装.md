@@ -4,7 +4,7 @@ title: "Centos7下MySQL8彻底卸载及安装"
 # subtitle: ""
 date: 2021-04-15 00:00:00
 author: youthred
-header-img: "img/jk-siwa.png"
+header-img: "img/onepunch.png"
 catalog: true
 tags: [CentOS,MySQL]
 ---

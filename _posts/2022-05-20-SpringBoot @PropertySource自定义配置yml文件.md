@@ -4,7 +4,7 @@ title: "SpringBoot @PropertySource自定义配置yml文件"
 subtitle: "有时候同一类配置需要单独使用一个配置文件，这个注解`@PropertySource`可以简单快速的实现。"
 date: 2022-05-20 14:15:00
 author: youthred
-header-img: "img/jk-siwa.png"
+header-img: "img/onepunch.png"
 catalog: true
 tags: [SpringBoot]
 ---
