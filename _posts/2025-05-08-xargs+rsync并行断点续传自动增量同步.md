@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "xargs+rsync多线程断点续传自动增量同步"
+title: "xargs+rsync并行断点续传自动增量同步"
 # subtitle: ""
 date: 2025-05-08 18:04:00
 author: youthred
