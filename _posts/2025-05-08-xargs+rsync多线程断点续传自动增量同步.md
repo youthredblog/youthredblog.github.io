@@ -33,22 +33,22 @@ find /local_path -type f -print0 | xargs -0 -I% -P5 rsync -avrP % remote_user@re
 
 执行远程同步后会提示输密码，进一步编写脚本以自动化
 
-rsync_push.sh
+rsync.sh
 
 ```shell
 #!/bin/bash
 # author https://github.com/youthred
 
 help() {
-  echo '-l | --local 本地文件'
-  echo '-r | --remote 远端文件'
+  echo '-f | --from 本地文件'
+  echo '-t | --to 远端文件'
   echo '-p | --pass 远端密码'
   echo '-L | --logfile 日志文件'
-  echo "示例: sh rsync_push.sh -l/tmp/a.txt -rru@rip:/tmp/ -p\'123456\' -L/home/test/rsync_push.log"
+  echo "示例: sh rsync.sh -f/tmp/a.txt -tru@rip:/tmp/ -p'123456' -L/home/test/rsync.log"
 }
 
-o="l:r:p:"
-longo="local:,remote:,pass:,help"
+o="f:t:p:"
+longo="from:,to:,pass:,help"
 OPTS=$(getopt --options $o --longoptions $longo -- "$@")
 
 if [ $? -ne 0 ]; then
@@ -59,19 +59,19 @@ fi
 # 将位置参数重置为解析后的选项
 eval set -- "OPTS"
 
-local=""
-remote=""
+from=""
+to=""
 pass=""
 logfile="rsync_push.log"
 
 while true; do
   case "$1" in
-    -l | --local)
-      local="$2"
+    -f | --from)
+      from="$2"
       shift 2
       ;;
-    -r | --remote)
-      remote="$2"
+    -t | --to)
+      to="$2"
       shift 2
       ;;
     -p | --pass)
@@ -89,7 +89,7 @@ while true; do
   esac
 done
 
-if [[ -z "$local" || -z "$remote" || -z "$pass" ]]; then
+if [[ -z "$from" || -z "$to" ]]; then
   echo "参数不完整"
   exit 1
 fi
@@ -104,9 +104,9 @@ log() {
 
 # rsync执行结果
 # expect默认超时30S，会导致大文件未传输完就G了，设置为-1表示无超时
-rsyncexecres=$(expect -c "
+rsyncexecres=$(expect -d -c "
 set timeout -1
-spawn rsync -avrP $local $remote
+spawn rsync -avP $from $to
 expect {
   \"yes/no\" { send \"yes\r\"; exp_continue }
   \"assword:\" { send \"$pass\r\" }
@@ -123,7 +123,7 @@ echo $rsyncexecres
 使用
 
 ```shell
-ls $(pwd) | xargs -I% -P5 sh rsync_push.sh -l$(pwd)/% -rru@rip:/rp/ -p'123456' -Lsynclogfile
-find /local_path -type f -print0 | xargs -0 -I% -P5 sh rsync_push.sh -l% -rru@rip:/rp/ -p'123456' -Lsynclogfile
-find $(pwd) -maxdepth 1 ! -path "$(pwd)" -print0 | xargs -0 -I% -P5 sh rsync_push.sh -l% -rru@rip:/rp/ -p'123456' -Lsynclogfile
+ls $(pwd) | xargs -I% -P5 sh rsync.sh -f$(pwd)/% -tru@rip:/rp/ -p'123456' -Lsynclogfile
+find /local_path -type f -print0 | xargs -0 -I% -P5 sh rsync.sh -f% -tru@rip:/rp/ -p'123456' -Lsynclogfile
+find $(pwd) -maxdepth 1 ! -path "$(pwd)" -print0 | xargs -0 -I% -P5 sh rsync.sh -f% -tru@rip:/rp/ -p'123456' -Lsynclogfile
 ```
