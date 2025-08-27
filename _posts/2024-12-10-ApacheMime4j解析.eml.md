@@ -178,7 +178,11 @@ public class EmlParser {
             // 纯文本
             if (bodyContent instanceof TextBody) {
                 TextBody textBody = (TextBody) bodyContent;
-                String content = IOUtils.toString(textBody.getReader());
+                String content = null;
+                try (InputStream tbis = textBody.getInputStream()) {
+                    content = IOUtils.toString(tbis, entity.getCharset());
+                } catch (Throwable ignored) {
+                }
                 String mimeType = entity.getMimeType();// text/plain text/html
                 if (mimeType.contains("plain")) {
                     eml.setTextContent(content);
@@ -236,16 +240,7 @@ public class EmlParser {
                             }
                         }
                     }
-                    // 解码Base64文件名
-                    if (StringUtils.isNotBlank(filename) && filename.startsWith("=?")) {
-                        filename = Arrays.stream(filename.split("\t")).map(s -> {
-                            try {
-                                return MimeUtility.decodeText(s);
-                            } catch (Throwable decodeE) {
-                                return FileNameUtil.cleanInvalid(s);
-                            }
-                        }).collect(Collectors.joining());
-                    }
+                    filename = decodeBase64Str(filename);
                     byte[] bytes = IOUtils.toByteArray(inputStream);
                     eml.getAttachments().add(ImmutableTriple.of(filename, (long) bytes.length, bytes));
                 }
@@ -255,6 +250,21 @@ public class EmlParser {
         } else {
             // 其他类型
         }
+    }
+
+    private static String decodeBase64Str(String str) {
+        if (StringUtils.isBlank(str)) {
+            return str;
+        }
+        try {
+            str = MimeUtility.decodeText(str);
+        } catch (Throwable decodeE) {
+            try {
+                str = MimeUtility.decodeText(FileNameUtil.cleanInvalid(str));
+            } catch (Throwable ignored) {
+            }
+        }
+        return str.trim();
     }
 
     /**
