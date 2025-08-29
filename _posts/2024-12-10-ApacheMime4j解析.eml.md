@@ -228,22 +228,14 @@ public class EmlParser {
             }
         } else if (ContentDispositionField.DISPOSITION_TYPE_ATTACHMENT.equals(entity.getDispositionType())) {
             try (InputStream inputStream = binaryBody.getInputStream()) {
-                Field contentDispositionField = header.getField(FieldName.CONTENT_DISPOSITION);
-                if (Objects.nonNull(contentDispositionField) && contentDispositionField instanceof ContentDispositionField) {
-                    String filename = ((ContentDispositionField) contentDispositionField).getFilename();
-                    if (StringUtils.isBlank(filename)) {
-                        Field contentTypeField = header.getField(FieldName.CONTENT_TYPE);
-                        if (Objects.nonNull(contentTypeField) && contentTypeField instanceof ContentTypeField) {
-                            filename = ((ContentTypeField) contentTypeField).getParameter("name");
-                            if (StringUtils.isBlank(filename)) {
-                                filename = IdUtil.nanoId() + "." + ((ContentTypeField) contentTypeField).getSubType();
-                            }
-                        }
-                    }
-                    filename = decodeBase64Str(filename);
-                    byte[] bytes = IOUtils.toByteArray(inputStream);
-                    eml.getAttachments().add(ImmutableTriple.of(filename, (long) bytes.length, bytes));
+                ContentTypeField ctf = (ContentTypeField) header.getField(FieldName.CONTENT_TYPE);
+                String filename = ctf.getParameter("name");
+                if (StringUtils.isBlank(filename)) {
+                    filename = IdUtil.nanoId() + "." + ctf.getSubType();
                 }
+                filename = decodeBase64Str(filename);
+                byte[] bytes = IOUtils.toByteArray(inputStream);
+                eml.getAttachments().add(ImmutableTriple.of(filename, (long) bytes.length, bytes));
             } catch (Throwable e) {
                 log.error(ExceptionUtils.getStackTrace(e));
             }
